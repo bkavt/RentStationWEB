@@ -1,82 +1,83 @@
 package by.htp.salon.domain;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
-import by.htp.salon.logics.MyIO;
 import by.htp.salon.logics.RentUnit;
 
 public class Manager {
-	private RentUnit freeEquip=new RentUnit();
-	private OrderList order=new OrderList();
-	private RentUnit rentEquip=new RentUnit();
-	private MyIO myIO=new MyIO();
-	private HashSet<Client>  ClientList=new HashSet();
-	
-	public void setList(Equipment[] equip){
+	private RentUnit freeEquip = new RentUnit();
+	private OrderList order = new OrderList();
+	private RentUnit rentEquip = new RentUnit();
+	private HashSet<Client> ClientList = new HashSet<Client>();
+
+	public void setList(Equipment[] equip) {
 		freeEquip.setEquip(equip);
 	}
-	
-	public void newOrder(Equipment equip,Client client){
+
+	public void newOrder(Equipment equip, Client client) {
 		ClientList.add(client);
-		if (equip!=null){
-			if (order.culcRentUnit(client)<3){
-			order.newOrder(equip, client);
-			rentEquip.add(equip);
-			int i=freeEquip.find(equip);
-			freeEquip.delByIndex(i);
-			}
-			else {System.out.println("You rent 3 units");
+		if (equip != null) {
+			if (order.culcRentUnit(client) < 3) {
+				order.newOrder(equip, client);
+				rentEquip.add(equip);
+				int i = freeEquip.find(equip);
+				freeEquip.delByIndex(i);
+			} else {
+				System.out.println("You rent 3 units");
 			}
 		}
 	}
-	public void showList(Equipment[] list){
-		int flag=0;
-		for(int i=0; i<list.length-1;i++){
-		 		if (list[i]!=null){
-		 			System.out.println(list[i]);
-		 		flag++;	
-		 		}
-		 	}
-		if (flag==0){
-			System.out.println("List empty");}
+
+	public void showList(Equipment[] list) {
+		int flag = 0;
+		for (int i = 0; i < list.length - 1; i++) {
+			if (list[i] != null) {
+				System.out.println(list[i]);
+				flag++;
+			}
+		}
+		if (flag == 0) {
+			System.out.println("List empty");
+		}
 	}
-	
-	
-	public void showFreeEquip(){
-		 freeEquip.showAll();
+
+	public void showFreeEquip() {
+		freeEquip.showAll();
 	}
-	
-	public void showRentEquip(){
-		 rentEquip.showAll();
+
+	public void showRentEquip() {
+		rentEquip.showAll();
 	}
-	
-	public void showClientUnit(Client client){
+
+	public void showClientUnit(Client client) {
 		showList(order.findClienOrder(client));
 	}
-	
-	
-	public int findIndexByTitle(String title){
-		int index=-1;
-		for (int i=0; i<freeEquip.getSizeList();i++){
-			if (freeEquip.getByIndex(i).getTitle()==title){
-			index=i;	
+
+	public int findIndexByTitle(String title) {
+		int index = -1;
+		for (int i = 0; i < freeEquip.getSizeList(); i++) {
+			if (freeEquip.getByIndex(i).getTitle() == title) {
+				index = i;
 			}
 		}
 		return index;
 	}
-	public Equipment findByTitle(String title){
+
+	public Equipment findByTitle(String title) {
 		int i;
-		i=findIndexByTitle(title);
-		if (i>=0){
-			return freeEquip.getByIndex(i);}
-		else {
-			System.out.println(title+" not found");	
-			return null;	
+		i = findIndexByTitle(title);
+		if (i >= 0) {
+			return freeEquip.getByIndex(i);
+		} else {
+			System.out.println(title + " not found");
+			return null;
 		}
 	}
 
-	public HashSet<Client> getClientList() {
-		return ClientList;
+	public List<Client> getClientList() {
+		return new ArrayList<Client>(ClientList);
 	}
 
 	public void setClientList(HashSet<Client> clientList) {
@@ -106,14 +107,5 @@ public class Manager {
 	public void setRentEquip(RentUnit rentEquip) {
 		this.rentEquip = rentEquip;
 	}
-	
-	
-	
-/*	
-	public void printReportByRent(){
-		myIO.WriteList(freeEquip);
-		myIO.ReadEquip();
-	}
-*/	
-	
+
 }

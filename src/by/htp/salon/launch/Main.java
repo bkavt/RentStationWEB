@@ -5,7 +5,9 @@ import by.htp.salon.domain.Manager;
 import by.htp.salon.domain.OrderList;
 import by.htp.salon.domain.RentStation;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -42,7 +44,7 @@ public class Main {
 		eq5.setTitle("Skates");
 		Equipment eq6=new Bike();
 		eq6.setTitle("Bike");
-//eq1.
+
 		Equipment ac1=new Helmet();
 		ac1.setTitle("Helmet");
 		Equipment ac2=new KneePads();
@@ -105,9 +107,11 @@ public class Main {
 		manager.showRentEquip();
 		System.out.println("Rent---------");
 		
-		//manager.printReportByRent();
-	
 		DomParser.importData(manager);
+		
+		
+		
+		DomParser.importClient(manager.getClientList());
 		System.out.println(manager.getClientList()); 
 		
 		
