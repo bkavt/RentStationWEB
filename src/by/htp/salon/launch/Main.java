@@ -107,15 +107,19 @@ public class Main {
 		manager.showRentEquip();
 		System.out.println("Rent---------");
 		
-		DomParser.importData(manager);
+		//DomParser.importData(manager);
 		
 		
 		
-		DomParser.importClient(manager.getClientList());
+		DomParser.importClientList(manager.getClientList());
 		System.out.println(manager.getClientList()); 
 		
 		
+		DomParser.importFreeEquipList(manager.getFreeEquip().getEquip());
 		
+		DomParser.importRentEquipList(manager.getRentEquip().getEquip());
+		
+		DomParser.importOrderList(manager.getOrder().getOrder());
 		
 	}
 

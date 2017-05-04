@@ -26,6 +26,8 @@ public class Skates extends Units {
 		return "Skates=" + size + "=" + weight + "=" + title + "=" + cost + "=" + id
 				+ "]";
 	}
+
+	private static final String ID = "id";
 	
 	
 }

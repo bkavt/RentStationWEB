@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><rent-station><clients><client id="1"><name>Vasya</name><soname>Ivanov</soname><document>Pasport</document></client><client id="2"><name>Pert</name><soname>Sidorov</soname><document>Pasport</document></client></clients></rent-station>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rent-station><clients><client id="1"><name>Vasya</name><soname>Ivanov</soname><documetn>Pasport</documetn></client><client id="2"><name>Pert</name><soname>Sidorov</soname><documetn>Pasport</documetn></client></clients></rent-station>
