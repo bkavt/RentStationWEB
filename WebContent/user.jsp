@@ -16,13 +16,13 @@
 			<th>Name</th>
 			<th>Document</th>
 		</tr>
-		<c:forEach items="${list}" var="i">
+		<c:forEach items="${list_eq}" var="i">
 			<h3>
 				<tr>
-					<td><c:out value="${list.indexOf(i)}" /></td>
-					<td><c:out value="${i.getLogin()}" /></td>
+					<td><c:out value="${list_eq.indexOf(i)}" /></td>
+					<td><c:out value="${i.getName()}" /></td>
 
-					<td><c:out value="${i.getPassword()}" /></td>
+					<td><c:out value="${i.getPrice()}" /></td>
 				</tr>
 			</h3>
 		</c:forEach>

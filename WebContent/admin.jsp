@@ -10,7 +10,7 @@
 <body bgcolor=cccccc>
 	Welcome Admin
 	<br>
-	<table border="1">
+<!-- <table border="1">
 		<tr>
 			<th>#</th>
 			<th>login</th>
@@ -27,8 +27,13 @@
 			</h3>
 		</c:forEach>
 	</table>
+	
+	 -->	
 	<form action="index.html">
 		<input type="submit" value="back">
 	</form>
 </body>
+
+
+
 </html>

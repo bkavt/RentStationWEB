@@ -6,50 +6,58 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static by.htp.salon.util.ConstantValue.*;
 
-
+import by.htp.salon.entity.Equip;
 import by.htp.salon.entity.User;
+import by.htp.salon.service.EquipServiceImpl;
+import by.htp.salon.service.EquipServise;
+import by.htp.salon.service.ServiceNoSuchUserException;
+import by.htp.salon.service.UserService;
+import by.htp.salon.service.UserServiceImpl;
 
 public class LoginCommandAction implements CommandAction {
+	private UserService userService;
+	private EquipServise equipService;
 
+	public LoginCommandAction() {
+		userService = new UserServiceImpl();
+		equipService = new EquipServiceImpl();
+	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String login = request.getParameter("login");
-		String password = request.getParameter("pass");
-		String page="";
-		
-		if ("user".equals(login) && "user".equals(password)){
-			page="/user.jsp";
-			List<User> users = new ArrayList<User>();
-			users.add(new User("user1","user1",true));
-			users.add(new User("user2","user2",true));
-			users.add(new User("user3","user3",true));
-			//request.setAttribute("list", users);
-			
-			
-								
-			request.setAttribute("list",users);
-			
-			
-			
-			//список оборудования
+		String login = request.getParameter(REQUEST_PARAM_LOGIN);
+		String password = request.getParameter(REQUEST_PARAM_PASSWORD);
+		String page = "";
+
+		User user;
+		try {
+			user = userService.authotise(login, password);
+
+			if (!user.isRole()) {
+				page = PAGE_USER_MAIN;
+				List<Equip> equipment = equipService.list();
+				request.setAttribute(REQUEST_PARAM_LIST_EQ, equipment);
+
+				// request.setAttribute("list",users);
+
+				// список оборудования
+			} else {
+				page = PAGE_ADMIN_MAIN;
+				List<Equip> equipment = new ArrayList<Equip>();
+
+				request.setAttribute("list", equipment);
+
+				// отчет за день
+			}
+
+		} catch (ServiceNoSuchUserException e) {
+			page= PAGE_ERROR;
+			request.setAttribute(REQUEST_PARAM_ERROR_MSG,e.getMessage());
+			//e.printStackTrace();
 		}
-		else if ("admin".equals(login) && "admin".equals(password)){
-			page="/admin.jsp";
-			List<User> users = new ArrayList<User>();
-			users.add(new User("uswwwer1","user1",true));
-			users.add(new User("uswwwer2","user2",true));
-			users.add(new User("uswwwer3","user3",true));
-			
-			request.setAttribute("list", users);
-			
-			// отчет за день
-		}
-		else{
-			page = "/error.jsp";
-		}
-		
+
 		return page;
 	}
-	
+
 }
