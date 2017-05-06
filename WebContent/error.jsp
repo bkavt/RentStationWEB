@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Error page</title>
+<style>
+
+</style>
 </head>
 <body bgcolor=cccccc>No such user!
 </body>
@@ -13,4 +16,6 @@
 <form action="index.html">
 	<input type="submit" value="back">
 </form>
+
+
 </html>

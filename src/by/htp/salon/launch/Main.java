@@ -5,6 +5,7 @@ import by.htp.salon.domain.Manager;
 import by.htp.salon.domain.OrderList;
 import by.htp.salon.domain.RentStation;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,13 +19,14 @@ import by.htp.salon.domain.accessory.KneePads;
 import by.htp.salon.domain.utils.Bike;
 import by.htp.salon.domain.utils.Rollers;
 import by.htp.salon.domain.utils.Skates;
-import by.htp.salon.logics.DomParser;
+import by.htp.salon.logics.DomParserRead;
+import by.htp.salon.logics.DomParserWrite;
 import by.htp.salon.logics.MyIO;
 
 
 public class Main {
 	
-	public static void main(String[] args) throws ParserConfigurationException {
+	public static void main(String[] args) throws Exception, Exception {
 		RentStation station=new RentStation();
 		Manager manager=new Manager();
 		
@@ -111,15 +113,17 @@ public class Main {
 		
 		
 		
-		DomParser.importClientList(manager.getClientList());
+		DomParserWrite.importClientList(manager.getClientList());
 		System.out.println(manager.getClientList()); 
 		
 		
-		DomParser.importFreeEquipList(manager.getFreeEquip().getEquip());
+		DomParserWrite.importFreeEquipList(manager.getFreeEquip().getEquip());
 		
-		DomParser.importRentEquipList(manager.getRentEquip().getEquip());
+		DomParserWrite.importRentEquipList(manager.getRentEquip().getEquip());
 		
-		DomParser.importOrderList(manager.getOrder().getOrder());
+		DomParserWrite.importOrderList(manager.getOrder().getOrder());
+		
+		DomParserRead.readEqList();
 		
 	}
 

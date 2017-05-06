@@ -3,7 +3,7 @@ package by.htp.salon.logics;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+import static by.htp.salon.util.ConstantValue.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -30,34 +30,8 @@ import by.htp.salon.domain.utils.Rollers;
 import by.htp.salon.domain.utils.Skates;
 import by.htp.salon.domain.utils.Units;
 
-public class DomParser {
-	private static final String RENT_STATION = "rent-station";
-	private static final String CLIENTS = "clients";
-	private static final String CLIENT = "client";
-	private static final String NAME = "name";
-	private static final String SONAME = "soname";
-	private static final String DOCUMENT = "documetn";
-	private static final String ID = "id";
-	private static final String EQUIPMENTS = "equipments";
-	private static final String UNITS = "units";
-	private static final String BIKE = "bike";
-	private static final String SKATE = "skate";
-	private static final String ROLLERS = "rollers";
-	private static final String TITLE = "title";
-	private static final String COST = "cost";
-	private static final String WEIGHT = "weight";
-	private static final String SIZE = "size";
-	private static final String ACCESSORY = "accessory";
-	private static final String HELMET = "helmet";
-	private static final String ELBOW_PADS = "elbow_pads";
-	private static final String KNEE_PADS = "knee_pads";
-	private static final String ORDER = "order";
-	private static final String ORDERS = "orders";
-	private static final String FILE_CLIENT_LIST = "salon_rentail_clients.xml";
-	private static final String FILE_FREE_EQUIP_LIST = "salon_rentail_free_equip.xml";
-	private static final String FILE_RENT_EQUIP_LIST = "salon_rentail_rent_equip.xml";
-	private static final String FILE_ORDER_LIST = "salon_order_equip.xml";
-
+public class DomParserWrite {
+	
 	public static Document greatDoc() throws ParserConfigurationException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = factory.newDocumentBuilder();
