@@ -43,4 +43,6 @@ public final class ConstantValue {
 	public static final String FILE_RENT_EQUIP_LIST = "salon_rentail_rent_equip.xml";
 	public static final String FILE_ORDER_LIST = "salon_order_equip.xml";
 
+	public static final String SQL_STATMENT_SELECT_USERS="select * from user";
+	public static final String SQL_STATMENT_SELECT_USER="select * from user where login= ? and password= ?";
 }

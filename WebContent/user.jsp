@@ -19,6 +19,14 @@ body {
   font-size: 16px;
   line-height: 1.3;
 }
+
+.txt1 {
+ 
+  color: red;
+  font-family: sans-serif;
+  font-size: 50px;
+  
+}
 .row {
  margin:10px 10px;
  margin-bottom: 10px;
@@ -50,7 +58,7 @@ body {
      
  }
   .brd{ 
-  border: 1px solid blue;
+  border: 2px solid blue;
   border-radius: 5px;
   }
   .col-1-3 {
@@ -67,9 +75,10 @@ body {
     width: 12.5%;
   }
   .text{
-  background-color: #3300CC;
+  background-color: #6699ff;
   width:70%;
   min-heigth:60%;
+  
   
   float: right;
  
@@ -86,8 +95,8 @@ body {
 </head>
 <body bgcolor=cccccc>
 
-<div class="row clearfix brd">
-<p>Welcome user</p>
+<div class="row clearfix brd txt1">
+<p>RENT STATION</p>
 <form action="index.html">
 		<input type="submit" value="back">
 	</form>

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import by.htp.salon.comand.CommandAction;
 import by.htp.salon.comand.CommandChoser;
+import by.htp.salon.dao.UserDao;
+import by.htp.salon.dao.UserDaoImpl;
 
 
 public class MainServlet extends HttpServlet {
@@ -28,6 +30,10 @@ public class MainServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//processRequest(request, response);
+		
+//UserDao dao =new UserDaoImpl();
+//		dao.fetchByCredentials("", "");
 		processRequest(request, response);
 		System.out.println("doPost");
 	}

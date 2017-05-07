@@ -28,7 +28,7 @@ public class LoginCommandAction implements CommandAction {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String login = request.getParameter(REQUEST_PARAM_LOGIN);
 		String password = request.getParameter(REQUEST_PARAM_PASSWORD);
-		String page = "";
+		String page = PAGE_ERROR;
 
 		User user;
 		try {
