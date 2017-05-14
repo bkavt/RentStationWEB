@@ -4,17 +4,29 @@ public final class ConstantValue {
 
 	private ConstantValue() {
 	}
-
+	public static final String ACTION_AUTHORISE = "login";
+	public static final String ACTION_MAKE_ORDER = "create_order";
+	public static final String ACTION_ORDER = "make_order";
+	
 	public static final String PAGE_ADMIN_MAIN = "/admin.jsp";
+	public static final String PAGE_DEFAULT = "/index.html";
 	public static final String PAGE_USER_MAIN = "/user.jsp";
 	public static final String PAGE_ERROR = "/error.jsp";
-
+	public static final String PAGE_ORDER_ALL = "/orders.jsp";
+	public static final String PAGE_ORDER_CREATE = "/order.jsp";
+	
+	
 	public static final String REQUEST_PARAM_ACTION = "";
 	public static final String REQUEST_PARAM_AUTHORISE = "";
 	public static final String REQUEST_PARAM_LOGIN = "login";
 	public static final String REQUEST_PARAM_PASSWORD = "pass";
 	public static final String REQUEST_PARAM_LIST_EQ = "list_eq";
 	public static final String REQUEST_PARAM_ERROR_MSG = "error_msg";
+	
+	public static final String REQUEST_PARAM_USER_ID = "user_id";
+	public static final String REQUEST_PARAM_EQUIP_ID = "equip_id";
+	public static final String REQUEST_PARAM_DATA_START_ID = "date_start";
+	public static final String REQUEST_PARAM_DATA_END_ID = "date_end";
 
 	public static final String RENT_STATION = "rent-station";
 	public static final String CLIENTS = "clients";
@@ -45,4 +57,5 @@ public final class ConstantValue {
 
 	public static final String SQL_STATMENT_SELECT_USERS="select * from user";
 	public static final String SQL_STATMENT_SELECT_USER="select * from user where login= ? and password= ?";
+	public static final String SQL_STATMENT_ORDER_GREATE="INSERT INTO sport.order (id_user, id_equipment, date_start, date_end) VALUES (?, ? , ?, ?)";
 }
