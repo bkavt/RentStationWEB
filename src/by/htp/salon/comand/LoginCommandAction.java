@@ -34,7 +34,7 @@ public class LoginCommandAction implements CommandAction {
 		try {
 			user = userService.authotise(login, password);
 
-			if (!user.isRole()) {
+			if (user.getRole()==1) {
 				page = PAGE_USER_MAIN;
 				List<Equip> equipment = equipService.list();
 				request.setAttribute(REQUEST_PARAM_LIST_EQ, equipment);
@@ -42,12 +42,9 @@ public class LoginCommandAction implements CommandAction {
 				// request.setAttribute("list",users);
 
 				// список оборудования
-			} else {
+			} else if (user.getRole()==2) {
 				page = PAGE_ADMIN_MAIN;
-				List<Equip> equipment = new ArrayList<Equip>();
-
-				request.setAttribute("list", equipment);
-
+				
 				// отчет за день
 			}
 

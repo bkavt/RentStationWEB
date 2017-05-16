@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Admin page</title>
+<style>
+<%@ include file="style/pages.css" %>
+</style>
 </head>
 <body bgcolor=cccccc>
 	Welcome Admin

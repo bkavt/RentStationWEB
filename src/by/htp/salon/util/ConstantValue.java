@@ -7,6 +7,8 @@ public final class ConstantValue {
 	public static final String ACTION_AUTHORISE = "login";
 	public static final String ACTION_MAKE_ORDER = "create_order";
 	public static final String ACTION_ORDER = "make_order";
+	public static final String ACTION_RETURN_EQUIP = "return_equip";
+	public static final String ACTION_MAKE_RETURN = "prepare_return_equip";
 	
 	public static final String PAGE_ADMIN_MAIN = "/admin.jsp";
 	public static final String PAGE_DEFAULT = "/index.html";
@@ -14,13 +16,14 @@ public final class ConstantValue {
 	public static final String PAGE_ERROR = "/error.jsp";
 	public static final String PAGE_ORDER_ALL = "/orders.jsp";
 	public static final String PAGE_ORDER_CREATE = "/order.jsp";
-	
+	public static final String PAGE_RETURN_EQUIP = "/return_equip.jsp";
 	
 	public static final String REQUEST_PARAM_ACTION = "";
 	public static final String REQUEST_PARAM_AUTHORISE = "";
 	public static final String REQUEST_PARAM_LOGIN = "login";
 	public static final String REQUEST_PARAM_PASSWORD = "pass";
 	public static final String REQUEST_PARAM_LIST_EQ = "list_eq";
+	public static final String REQUEST_PARAM_LIST_USER = "list_user";
 	public static final String REQUEST_PARAM_ERROR_MSG = "error_msg";
 	
 	public static final String REQUEST_PARAM_USER_ID = "user_id";
@@ -58,4 +61,11 @@ public final class ConstantValue {
 	public static final String SQL_STATMENT_SELECT_USERS="select * from user";
 	public static final String SQL_STATMENT_SELECT_USER="select * from user where login= ? and password= ?";
 	public static final String SQL_STATMENT_ORDER_GREATE="INSERT INTO sport.order (id_user, id_equipment, date_start, date_end) VALUES (?, ? , ?, ?)";
+	public static final String SQL_STATMENT_FREE_EQUIP_LIST="SELECT * FROM sport.equipment WHERE status=0";
+	public static final String SQL_STATMENT_RENT_EQUIP_LIST="SELECT * FROM sport.equipment WHERE status=1";
+	public static final String SQL_STATMENT_CHANGE_STATUS_EQUIP="UPDATE sport.equipment SET status=? WHERE  id_equipment=?";
+	public static final String SQL_STATMENT_USER_LIST="SELECT * FROM sport.user";
+	
+	public static final int STATUS_RENT=1;
+	public static final int STATUS_FREE=0;
 }

@@ -13,8 +13,14 @@ public class CommandChoser {
 			return new OrderCreatedAction();
 		
 		case ACTION_ORDER:
-			System.out.println("meke order action" + action);
+			System.out.println("meke order action " + action);
 			return new MakeOrderAction();
+		case ACTION_RETURN_EQUIP:
+			System.out.println("return action action " + action);
+			return new ReturEquipAction();
+		case ACTION_MAKE_RETURN:
+			System.out.println("return action action " + action);
+			return new MakeReturnAction();
 		}
 	return null;	
 	}

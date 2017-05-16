@@ -1,7 +1,10 @@
 package by.htp.salon.service;
 
+import java.util.List;
+
 import by.htp.salon.dao.UserDao;
 import by.htp.salon.dao.UserDaoImpl;
+import by.htp.salon.entity.Equip;
 import by.htp.salon.entity.User;
 
 public class UserServiceImpl implements UserService {
@@ -37,5 +40,13 @@ public  UserServiceImpl() {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	@Override
+	public List<User> list() {
+		
+		return dao.getUserList();
+	}
+	
+	
+	
 
 }

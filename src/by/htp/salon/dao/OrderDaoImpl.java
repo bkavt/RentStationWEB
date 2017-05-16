@@ -40,6 +40,12 @@ public class OrderDaoImpl implements OrderDao {
 				
 				ps.executeUpdate();
 				
+				ps = conn.prepareStatement(SQL_STATMENT_CHANGE_STATUS_EQUIP);
+				
+				ps.setInt(1, STATUS_RENT);
+				ps.setLong(2, order.getEquipment().getEuipId());
+				ps.executeUpdate();
+				
 				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
