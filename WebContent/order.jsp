@@ -21,23 +21,23 @@
 		<p align="center">Greate new order</p>
 				<input type="hidden" value="create_order" name="action" /> 
 				<div class="row clearfix ">		
-				<select name="user_id">
+				<select name="user_id" class="w">
 					<c:forEach items="${list_user}" var="i">
 					<option value="${i.getUserId()}" ><c:out value="${i.getName()}" /></option>
 					</c:forEach>
 				</select>
 				</div>
 				<div class="row clearfix ">
-				<select name="equip_id">
+				<select name="equip_id" class="w">
 					<c:forEach items="${list_eq}" var="i">
 					<option value="${i.getEuipId()}" ><c:out value="${i.getName()}" /></option>
 					</c:forEach>
 				</select>
 				</div>		
 						<div class="row clearfix ">
-				<input type="date" name="date_start"></div>
+				<input type="date" name="date_start" class="w"></div>
 				<div class="row clearfix ">
-				<input type="date" name="date_end"></div>
+				<input type="date" name="date_end" class="w"></div>
 				
 				<p align="center">
 				

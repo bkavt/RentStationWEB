@@ -24,7 +24,7 @@
 				
 				</div>
 				<div class="row clearfix ">
-				<select name="equip_id">
+				<select name="equip_id" class="w">
 					<c:forEach items="${list_eq}" var="i">
 					<option value="${i.getEuipId()}" ><c:out value="${i.getName()}" /></option>
 					</c:forEach>

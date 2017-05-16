@@ -37,8 +37,11 @@
 	color:white;
 
 }
-
+.w{
+	width:145px;
+}
 .button20 {
+	width:120px;
   position: relative;
   display: inline-block;
   font-weight: bold;
