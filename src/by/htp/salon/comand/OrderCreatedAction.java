@@ -26,13 +26,14 @@ public class OrderCreatedAction implements CommandAction {
 	public OrderCreatedAction() {
 		service = new OrderServiceImpl();
 		equipService = new EquipServiceImpl();
+		userService = new UserServiceImpl();
 	}
 
 
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String page = PAGE_USER_MAIN;
+		String page = PAGE_ORDER_CREATE;
 		String userId = request.getParameter(REQUEST_PARAM_USER_ID);
 		String equipId = request.getParameter(REQUEST_PARAM_EQUIP_ID);
 		String dataStart = request.getParameter(REQUEST_PARAM_DATA_START_ID);
@@ -50,6 +51,9 @@ public class OrderCreatedAction implements CommandAction {
 		}
 		List<Equip> equipment = equipService.list();
 		request.setAttribute(REQUEST_PARAM_LIST_EQ, equipment);
+		List<User> user = userService.list();
+		request.setAttribute(REQUEST_PARAM_LIST_USER, user);
+		
 		
 		return page;
 	}

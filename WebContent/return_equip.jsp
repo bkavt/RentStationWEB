@@ -17,6 +17,9 @@
 		
 	</div>
 		<br>
+		
+		
+		
 		<form id="login" action="MainServlet" method="post" class="form brd">
 		<p align="center">Return equipment</p>
 				<input type="hidden" value="return_equip" name="action" /> 
@@ -37,11 +40,43 @@
 				<input id="submit" value="return" type="submit" class="button20" form="login">
 				
 				</p>
-				<br>
+				
+				<p align="center">
+				
+				<input id="submit" value="back_menu" type="submit" class="button20" form="back">
+				
+				</p><br>
 				</form>
 				
 	
-				
+			
+		</form>
+		<form id="back" action="MainServlet" method="post">
+			<input type="hidden" value="back_menu" name="action" /> </form>	
+	<div>
+	<div class="col-1-8"></div>
+	<div class="col-1-2">
+		<div class="row clearfix">
+			<div class="col-1-3 brd">#</div>
+			<div class="col-1-3 brd">Name</div>
+			<div class="col-1-3 brd">Price</div>
+		</div>
+		<c:forEach items="${list_eq}" var="i">
+			<div class="row clearfix ">
+				<div class="col-1-3 brd">
+					<c:out value="${i.getEuipId()}" />
+				</div>
+				<div class="col-1-3 brd">
+					<c:out value="${i.getName()}" />
+				</div>
+				<div class="col-1-3 brd">
+					<c:out value="${i.getPrice()}" />
+				</div>
+			</div>
+		</c:forEach>
+	</div>
+	
+</div>					
 				
 	</body>
 </html>

@@ -25,7 +25,7 @@ private EquipServise equipService;
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String page = PAGE_USER_MAIN;
+		String page = PAGE_RETURN_EQUIP;
 		
 		String equipId = request.getParameter(REQUEST_PARAM_EQUIP_ID);
 		if(equipId!=null){
@@ -33,7 +33,7 @@ private EquipServise equipService;
 		
 		
 		
-		List<Equip> equipment = equipService.list();
+		List<Equip> equipment = equipService.rentList();
 		request.setAttribute(REQUEST_PARAM_LIST_EQ, equipment);
 		
 		return page;

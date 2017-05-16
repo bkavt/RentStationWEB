@@ -21,21 +21,34 @@
 <div class="row clearfix ">
 	<div class="col-1-8">
 		<div class="row clearfix ">
-			<form id="login" action="MainServlet" method="post">
+		
+		<div class="form brd">
+		<br>
+			<p align="center">
+				<input id="submit" value="make order" type="submit"class="button20" form="make_order">
+			</p>
+		
+		
+			<form id="make_order" action="MainServlet" method="post">
 				<input type="hidden" value="make_order" name="action" /> 
-				<input id="submit" value="make order" type="submit"class="button20">
 			</form>
-			<br>
-			<form id="login" action="MainServlet" method="post">
+			<p align="center">
+				<input id="submit" value="return" type="submit"class="button20" form="return">
+			</p>
+				<form id="return" action="MainServlet" method="post">
 				<input type="hidden" value="prepare_return_equip" name="action" /> 
-				<input id="submit" value="return" type="submit"class="button20">
+			
 			</form>
+			
+			<p align="center">
+				<input type="submit" value="LOG OUT" class="button20" form="out">
+			</p>
+			
+			<form action="index.html" id="out" >
+						</form>
 			<br>
-			<form action="index.html" >
-					<input type="submit" value="LOG OUT" class="button20">
-			</form>
 		</div>
-	
+		</div>
 	</div>
 	<div class="col-7-8">
 		<div class="col-1-4">
