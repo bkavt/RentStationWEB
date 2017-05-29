@@ -31,7 +31,7 @@ public  UserServiceImpl() {
 			throw new ServiceNoSuchUserException("Invalid credetials");
 		}
 		*/
-		
+		System.out.println(user.getRole());
 		return user;
 	}
 

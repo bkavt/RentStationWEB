@@ -53,7 +53,7 @@ public class LoginCommandAction implements CommandAction {
 			request.setAttribute(REQUEST_PARAM_ERROR_MSG,e.getMessage());
 			//e.printStackTrace();
 		}
-
+		
 		return page;
 	}
 
