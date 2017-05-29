@@ -10,6 +10,7 @@ public final class ConstantValue {
 	public static final String ACTION_RETURN_EQUIP = "return_equip";
 	public static final String ACTION_MAKE_RETURN = "prepare_return_equip";
 	public static final String ACTION_BACK_MENU = "back_menu";
+	public static final String ACTION_START_APP = "start";
 	
 	public static final String PAGE_ADMIN_MAIN = "/admin.jsp";
 	public static final String PAGE_DEFAULT = "/index.html";

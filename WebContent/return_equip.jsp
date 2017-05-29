@@ -6,10 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-<%@ include file="style/pages.css" %>
-
-</style>
+<%@ include file="my_style.jsp" %>
 </head>
 	<body  bgcolor=cccccc>
 	<div class="brd txt1">
@@ -26,26 +23,26 @@
 				<div class="row clearfix ">		
 				
 				</div>
-				<div class="row clearfix ">
-				<select name="equip_id" class="w">
+				
+				<select name="equip_id"  class="form-control">
 					<c:forEach items="${list_eq}" var="i">
 					<option value="${i.getEuipId()}" ><c:out value="${i.getName()}" /></option>
 					</c:forEach>
 				</select>
-				</div>		
 				
 				
+				<br>
 				<p align="center">
 				
-				<input id="submit" value="return" type="submit" class="button20" form="login">
+				<input id="submit" value="return" type="submit" class="btn btn-primary btn-lg button" form="login">
 				
 				</p>
 				
 				<p align="center">
 				
-				<input id="submit" value="back_menu" type="submit" class="button20" form="back">
+				<input id="submit" value="back_menu" type="submit" class="btn btn-primary btn-lg button" form="back">
 				
-				</p><br>
+				</p>
 				</form>
 				
 	

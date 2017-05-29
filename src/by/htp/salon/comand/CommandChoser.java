@@ -15,6 +15,7 @@ public class CommandChoser {
 		case ACTION_ORDER:
 			System.out.println("meke order action " + action);
 			return new MakeOrderAction();
+		
 		case ACTION_RETURN_EQUIP:
 			System.out.println("return action action " + action);
 			return new ReturEquipAction();
@@ -24,6 +25,10 @@ public class CommandChoser {
 		case ACTION_BACK_MENU:
 			System.out.println("back menu action " + action);
 			return new BackMenuAction();
+			
+		case ACTION_START_APP:
+			System.out.println("meke order action " + action);
+			return new MakeOrderAction();
 		}
 	return null;	
 	}

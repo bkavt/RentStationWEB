@@ -1,6 +1,7 @@
 package by.htp.salon.controller;
 
 import java.io.IOException;
+import static by.htp.salon.util.ConstantValue.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import by.htp.salon.comand.CommandChoser;
 import by.htp.salon.dao.UserDao;
 import by.htp.salon.dao.UserDaoImpl;
 
+import static by.htp.salon.util.ConstantValue.*;
 
 public class MainServlet extends HttpServlet {
     
@@ -41,7 +43,7 @@ public class MainServlet extends HttpServlet {
 	
 	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String action = request.getParameter("action");
-		String page=null;
+		String page=PAGE_ERROR;
 		if (action!=null){
 			CommandAction currentAction= CommandChoser.chooseAction(action);
 			page= currentAction.execute(request, response);
