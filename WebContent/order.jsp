@@ -41,20 +41,12 @@
 				
 				<p align="center">
 				
-				<input id="submit" value="new_order" type="submit" class="button20" form="login">
-				
-				</p>
-				<p align="center">
-				
-				<input id="submit" value="back_menu" type="submit" class="button20" form="back">
+				<input id="submit" value="order" type="submit" class="button20" form="login">
 				
 				</p>
 				<br>
-		</form>
-			<form id="back" action="MainServlet" method="post">
-				<input type="hidden" value="back_menu" name="action" /> 
+				</form>
 				
-			</form>	
 <div>
 	<div class="col-1-8"></div>
 	<div class="col-1-2">

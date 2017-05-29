@@ -21,9 +21,6 @@ public class CommandChoser {
 		case ACTION_MAKE_RETURN:
 			System.out.println("return action action " + action);
 			return new MakeReturnAction();
-		case ACTION_BACK_MENU:
-			System.out.println("back menu action " + action);
-			return new BackMenuAction();
 		}
 	return null;	
 	}
