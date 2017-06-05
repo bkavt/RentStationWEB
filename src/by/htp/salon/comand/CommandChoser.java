@@ -29,6 +29,9 @@ public class CommandChoser {
 		case ACTION_START_APP:
 			System.out.println("meke order action " + action);
 			return new MakeOrderAction();
+		case ACTION_LOG_OUT:
+			System.out.println("meke order action " + action);
+			return new LoginPageAction();
 		}
 	return null;	
 	}

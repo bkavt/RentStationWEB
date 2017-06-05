@@ -11,14 +11,16 @@ public final class ConstantValue {
 	public static final String ACTION_MAKE_RETURN = "prepare_return_equip";
 	public static final String ACTION_BACK_MENU = "back_menu";
 	public static final String ACTION_START_APP = "start";
+	public static final String ACTION_LOG_OUT = "log_out";
 	
-	public static final String PAGE_ADMIN_MAIN = "/admin.jsp";
-	public static final String PAGE_DEFAULT = "/index.html";
-	public static final String PAGE_USER_MAIN = "/user.jsp";
-	public static final String PAGE_ERROR = "/error.jsp";
-	public static final String PAGE_ORDER_ALL = "/orders.jsp";
-	public static final String PAGE_ORDER_CREATE = "/order.jsp";
-	public static final String PAGE_RETURN_EQUIP = "/return_equip.jsp";
+	public static final String PAGE_ADMIN_MAIN = "/WEB-INF/admin.jsp";
+	public static final String PAGE_LOGIN = "/WEB-INF/login.jsp";
+	public static final String PAGE_DEFAULT = "/WEB-INF/index.html";
+	public static final String PAGE_USER_MAIN = "/WEB-INF/user.jsp";
+	public static final String PAGE_ERROR = "/WEB-INF/error.jsp";
+	public static final String PAGE_ORDER_ALL = "/WEB-INF/orders.jsp";
+	public static final String PAGE_ORDER_CREATE = "/WEB-INF/order.jsp";
+	public static final String PAGE_RETURN_EQUIP = "/WEB-INF/return_equip.jsp";
 	
 	public static final String REQUEST_PARAM_ACTION = "";
 	public static final String REQUEST_PARAM_AUTHORISE = "";

@@ -1,6 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login page</title>
+<style type="text/css">
+
+
 #login {
 	background-color: #ffffff;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(������),
+	background-image: -webkit-gradient(linear, left top, left bottom, from(сссссс),
 		to(#eee));
 	background-image: -webkit-linear-gradient(top, #fff, #eee);
 	background-image: -moz-linear-gradient(top, #fff, #eee);
@@ -172,3 +182,26 @@ h1:before {
 	line-height: 35px;
 	margin-left: 10px;
 }
+</style>
+</head>
+<body bgcolor=cccccc>
+	<form id="login" action="MainServlet" method="post">
+		<h1>LOG_in</h1>
+		<fieldset id="inputs" action="login">
+			<input id="username" placeholder="Логин" autofocus type="text"
+				name="login"> 
+				<input id="password" placeholder="Пароль"
+				type="password" name="pass">
+				 <input type="hidden" value="login" name="action" />
+		</fieldset>
+		<fieldset id="actions">
+			<input id="submit" value="ENTER" type="submit">
+		</fieldset>
+	</form>
+
+
+
+
+
+</body>
+</html>

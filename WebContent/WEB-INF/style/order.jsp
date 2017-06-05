@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:forward page="/MainServlet?action=start"></jsp:forward>
+
 </body>
 </html>
